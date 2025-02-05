@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ccircle cx="12" cy="12" r="10" fill="white" /%3E%3C/svg%3E'), auto;
+  }
+  
+  .eye-container {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .eye {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(32, 29, 29);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(123, 20, 121, 0.2);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .pupil {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

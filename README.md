@@ -1,6 +1,6 @@
-## WORKING on something...
+## WORKING...
 
-I spent my valuable time in 
+I spent my time in 
 - Python
 - C
 - C++
@@ -10,7 +10,7 @@ I spent my valuable time in
 
 <hr>
 
-I want to spend more valuable time with 
+I want to spend more time with 
 
 - C#
 - django
@@ -19,4 +19,4 @@ I want to spend more valuable time with
 - PROJECTS
 
 Just a beginning not going to end soon. 
-Still loading...
+Still working...

@@ -7,15 +7,14 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Ccircle cx="12" cy="12" r="10" fill="white" /%3E%3C/svg%3E'), auto;
-  }
+}
   
-  .eye-container {
+.eye-container {
     display: flex;
     gap: 50px;
-  }
+}
   
-  .eye {
+.eye {
     position: relative;
     width: 100px;
     height: 100px;
@@ -23,9 +22,9 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(123, 20, 121, 0.2);
     transition: transform 0.1s ease-out;
-  }
+}
   
-  .pupil {
+.pupil {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -34,5 +33,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
   
+.video-feed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#video-input {
+    transform: scaleX(-1);
+    border: 8px solid;
+    border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4) 1;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+}
+
+#hand-canvas {
+    pointer-events: none;
+    border: 8px solid;
+    border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4) 1;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+}

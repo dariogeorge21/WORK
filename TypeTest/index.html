@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typing Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0F172A] text-gray-100 min-h-screen">
+    <div id="particles-js" class="fixed inset-0 z-0 pointer-events-none"></div>
+    
+    <div class="container max-w-[90%] relative z-10 mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-12">
+            <div class="timer bg-[#1E293B] rounded-xl p-4 backdrop-blur-sm border border-blue-500/20 shadow-lg shadow-blue-500/10">
+                <span id="time" class="text-4xl font-mono text-blue-400">30s</span>
+            </div>
+            <div class="text-controls flex items-center gap-4 bg-[#1E293B] rounded-xl p-4 backdrop-blur-sm border border-blue-500/20">
+                <button id="decrease-text" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors px-2">A-</button>
+                <span id="text-size" class="text-lg text-gray-400 min-w-[3rem] text-center">32px</span>
+                <button id="increase-text" class="text-2xl text-blue-400 hover:text-blue-300 transition-colors px-2">A+</button>
+            </div>
+            <div class="speed bg-[#1E293B] rounded-xl p-4 backdrop-blur-sm border border-green-500/20 shadow-lg shadow-green-500/10">
+                <span id="wpm" class="text-4xl font-mono text-green-400">0 WPM</span>
+            </div>
+        </div>
+        
+        <div class="typing-container bg-[#1E293B]/90 backdrop-blur-md rounded-2xl p-16 border border-blue-500/10 shadow-2xl shadow-blue-500/5 min-h-[500px]">
+            <div id="text-display" class="text-display text-2xl leading-relaxed max-w-none mx-auto"></div>
+        </div>
+
+        <div class="fixed bottom-8 right-8 flex items-center gap-2 text-gray-400 bg-[#1E293B] rounded-xl px-4 py-2 backdrop-blur-sm border border-blue-500/20">
+            <span class="text-sm">Press</span>
+            <kbd class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-sm">`</kbd>
+            <span class="text-sm">to restart</span>
+        </div>
+    </div>
+
+    <div id="results" class="results-screen hidden">
+        <div class="results-content w-full max-w-4xl p-8">
+            <h1 class="text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">Test Complete!</h1>
+            <h2 class="text-3xl text-center mb-12 text-gray-300">Thank you for completing the test!</h2>
+            
+            <div class="stats-grid grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="stat-box bg-[#1E293B] rounded-2xl p-8 border border-blue-500/20 backdrop-blur-md transition-all duration-300 hover:scale-105">
+                    <h3 class="text-2xl mb-4 text-blue-400">Words Per Minute</h3>
+                    <span id="final-wpm" class="text-6xl font-bold text-white">0</span>
+                </div>
+                <div class="stat-box bg-[#1E293B] rounded-2xl p-8 border border-green-500/20 backdrop-blur-md transition-all duration-300 hover:scale-105">
+                    <h3 class="text-2xl mb-4 text-green-400">Accuracy</h3>
+                    <span id="accuracy" class="text-6xl font-bold text-white">0%</span>
+                </div>
+            </div>
+            
+            <div class="chart-container bg-[#1E293B] rounded-2xl p-6 border border-blue-500/20 backdrop-blur-md mb-12">
+                <canvas id="speedChart"></canvas>
+            </div>
+            
+            <div class="text-center text-gray-400">
+                <span class="text-sm">Press</span>
+                <kbd class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-sm mx-2">`</kbd>
+                <span class="text-sm">to try again</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

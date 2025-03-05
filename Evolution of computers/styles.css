@@ -41,7 +41,7 @@ body::before {
 
 .title {
     font-family: 'Russo One', sans-serif;
-    font-size: 48px;
+    font-size: 36px;
     color: #00ff88;
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.5),
                  0 0 20px rgba(0, 255, 136, 0.3);
@@ -61,18 +61,19 @@ body::before {
 .timeline {
     position: relative;
     background: rgba(26, 26, 26, 0.8);
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     border: 1px solid rgba(0, 255, 136, 0.2);
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .timeline-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 28px;
     color: #00ff88;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
     text-align: center;
     text-transform: uppercase;
@@ -112,30 +113,27 @@ body::before {
 
 .timeline-item {
     flex: 0 0 auto;
-    min-width: 200px;
+    min-width: 300px;
     background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 35px;
+    border-radius: 12px;
     text-align: center;
     border: 1px solid rgba(0, 255, 136, 0.1);
     opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.timeline-item.hidden {
-    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin: 0 20px;
 }
 
 .year {
-    font-size: 14px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     font-family: 'Arial', sans-serif;
 }
 
 .description {
-    font-size: 26px;
-    line-height: 1.3;
+    font-size: 38px;
+    line-height: 1.4;
     font-family: 'Playfair Display', serif;
     color: #00ff88;
     text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);

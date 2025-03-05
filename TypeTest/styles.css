@@ -26,35 +26,35 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
+    width: 95%;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+    padding: clamp(1rem, 2vw, 2rem);
 }
 
 .stats-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
-    font-size: 1.5rem;
+    margin-bottom: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 }
 
 .timer, .speed {
     background-color: var(--secondary-color);
-    padding: 1rem 2rem;
+    padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 2rem);
     border-radius: 8px;
-    min-width: 150px;
+    min-width: 120px;
     text-align: center;
 }
 
 .typing-container {
     background-color: var(--secondary-color);
-    padding: 3rem;
+    padding: clamp(1.5rem, 3vw, 3rem);
     border-radius: 12px;
     margin: 0 auto;
     position: relative;
     max-width: 100%;
-    margin: 0 auto;
+    height: clamp(400px, 60vh, 600px);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
@@ -76,8 +76,8 @@ body {
 
 .text-display {
     text-align: left;
-    padding: 0 2rem;
-    font-size: 32px;
+    padding: 0 clamp(1rem, 2vw, 2rem);
+    font-size: clamp(24px, 2vw, 32px);
     line-height: 1.6;
     white-space: pre-wrap;
     word-break: break-word;
@@ -123,31 +123,32 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 50;
+    padding: clamp(1rem, 2vw, 2rem);
 }
 
 .results-content {
-    width: 90%;
-    max-width: 1000px;
+    width: 95%;
+    max-width: 1200px;
     text-align: center;
-    padding: 2rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
 }
 
 .results-content h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: clamp(2rem, 3vw, 3rem);
     color: var(--primary-color);
 }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-bottom: clamp(2rem, 3vw, 3rem);
 }
 
 .stat-box {
     background-color: var(--secondary-color);
-    padding: 2rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
     border-radius: 12px;
     transition: transform 0.2s;
 }
@@ -158,26 +159,26 @@ body {
 
 .stat-box h3 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: clamp(0.75rem, 1vw, 1rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 }
 
 .stat-box span {
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     font-weight: bold;
 }
 
 .chart-container {
     background-color: var(--secondary-color);
-    padding: 2rem;
+    padding: clamp(1rem, 2vw, 2rem);
     border-radius: 12px;
-    margin: 3rem 0;
-    height: 300px;
+    margin: clamp(2rem, 3vw, 3rem) 0;
+    height: clamp(250px, 40vh, 300px);
 }
 
 .restart-btn {
-    padding: 1rem 3rem;
-    font-size: 1.5rem;
+    padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
@@ -185,15 +186,15 @@ body {
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: clamp(1rem, 2vw, 2rem);
+    right: clamp(1rem, 2vw, 2rem);
 }
 
 .shortcut-hint {
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 1vw, 1rem);
     opacity: 0.7;
-    margin-left: 0.5rem;
-    padding: 0.2rem 0.5rem;
+    margin-left: clamp(0.25rem, 0.5vw, 0.5rem);
+    padding: clamp(0.1rem, 0.2vw, 0.2rem) clamp(0.5rem, 0.5vw, 0.5rem);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
@@ -226,4 +227,141 @@ body {
 
 @keyframes shimmer {
     100% { transform: translateX(100%); }
+}
+
+/* Media Queries for different laptop screens */
+
+/* Small laptops and below (13"-14" laptops) */
+@media screen and (max-width: 1366px) {
+    .container {
+        width: 98%;
+        padding: 1rem;
+    }
+
+    .typing-container {
+        padding: 1.5rem;
+        height: clamp(350px, 55vh, 450px);
+    }
+
+    .text-display {
+        font-size: clamp(20px, 1.8vw, 28px);
+    }
+
+    .stats-container {
+        margin-bottom: 2rem;
+    }
+
+    .timer, .speed {
+        padding: 0.75rem 1rem;
+        min-width: 100px;
+    }
+
+    .results-content {
+        padding: 1.5rem;
+    }
+
+    .stats-grid {
+        gap: 1rem;
+    }
+
+    .chart-container {
+        height: clamp(200px, 35vh, 250px);
+    }
+}
+
+/* Medium laptops (15" laptops) */
+@media screen and (min-width: 1367px) and (max-width: 1600px) {
+    .container {
+        width: 96%;
+    }
+
+    .typing-container {
+        height: clamp(400px, 58vh, 500px);
+    }
+
+    .text-display {
+        font-size: clamp(22px, 1.9vw, 30px);
+    }
+}
+
+/* Large laptops and desktop monitors (17" and above) */
+@media screen and (min-width: 1601px) {
+    .container {
+        width: 90%;
+        max-width: 1800px;
+    }
+
+    .typing-container {
+        height: clamp(450px, 65vh, 600px);
+    }
+
+    .text-display {
+        font-size: clamp(24px, 2vw, 32px);
+        padding: 0 3rem;
+    }
+
+    .stats-container {
+        margin-bottom: 3rem;
+    }
+
+    .timer, .speed {
+        padding: 1.25rem 2.5rem;
+        min-width: 180px;
+    }
+
+    .results-content {
+        max-width: 1400px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+    }
+}
+
+/* High-DPI (Retina) displays */
+@media screen and (min-resolution: 192dpi) {
+    .text-display {
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0F172A;
+        --text-color: #ffffff;
+        --secondary-color: #1E293B;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .stat-box:hover {
+        transform: none;
+    }
+}
+
+/* Portrait orientation warning */
+@media screen and (orientation: portrait) {
+    body::before {
+        content: "Please use landscape orientation for better experience";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        color: var(--text-color);
+        text-align: center;
+        padding: 0.5rem;
+        z-index: 1000;
+        font-size: 0.875rem;
+    }
 }
